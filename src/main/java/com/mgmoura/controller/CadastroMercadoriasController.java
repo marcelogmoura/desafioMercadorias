@@ -44,12 +44,12 @@ public class CadastroMercadoriasController {
 			
 			mercadoriaRepository.create(mercadoria);
 			
-			modelAndView.addObject("mensagem" , "Mercadoria cadastrada com sucesso.");
+			modelAndView.addObject("mensagem_sucesso" , "Mercadoria cadastrada com sucesso.");
 			
 			
 		}catch (Exception e) {
 			
-			modelAndView.addObject("mensagem" , "Erro: " + e.getMessage());
+			modelAndView.addObject("mensagem_erro" , "Erro: " + e.getMessage());
 			
 		}
 		

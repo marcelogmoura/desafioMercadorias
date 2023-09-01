@@ -11,6 +11,9 @@
 </head>
 <body>
 
+	<!-- componente messages -->
+	<jsp:include page="/WEB-INF/views/components/messages.jsp"></jsp:include>
+
 <h2> consultar </h2>
 
 

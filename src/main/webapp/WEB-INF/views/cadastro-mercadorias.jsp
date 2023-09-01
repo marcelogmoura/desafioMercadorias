@@ -16,6 +16,9 @@
 </head>
 <body>
 
+	<!-- componente messages -->
+	<jsp:include page="/WEB-INF/views/components/messages.jsp"></jsp:include>
+
 		<div class="container d-flex justify-content-center align-items-center vh-100">
 		<div class="card p-4">
 
@@ -86,7 +89,7 @@
 				rules : {
 					"nomeMercadoria" : {
 						required : true,
-						minlength : 8,
+						minlength : 3,
 						maxlength : 100
 					},
 					"descricao" : {
