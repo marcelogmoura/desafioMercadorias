@@ -36,11 +36,11 @@ public class CadastroMercadoriasController {
 		try {
 			Mercadoria mercadoria = new Mercadoria();
 			
-			mercadoria.setNomeMercadoria(request.getParameter("nome"));
+			mercadoria.setNomeMercadoria(request.getParameter("nomeMercadoria"));
 			mercadoria.setDescricao(request.getParameter("descricao"));
 			mercadoria.setQuantidade(Integer.parseInt(request.getParameter("quantidade")));
 			mercadoria.setTipo(Integer.parseInt(request.getParameter("tipo")));
-			mercadoria.setDataEntrada(new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("data")));
+			mercadoria.setDataEntrada(new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("dataEntrada")));
 			
 			mercadoriaRepository.create(mercadoria);
 			
