@@ -12,6 +12,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.mgmoura.repositories.MercadoriaRepository;
+
 @Configuration
 @ComponentScan(basePackages = "com.mgmoura")
 @EnableWebMvc
@@ -38,6 +40,11 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		dataSource.setUsername("postgres");
 		dataSource.setPassword("1234567");
 		return dataSource;
+	}
+	
+	@Bean
+	public MercadoriaRepository getMercadoriaRepository() {
+		return new MercadoriaRepository(getDataSource());				
 	}
 
 }
