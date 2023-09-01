@@ -6,8 +6,12 @@
 <meta charset="UTF-8">
 <title>Cadastro de Mercadorias</title>
 
-<link rel="stylesheet" href="resources/css/bootstrap.min.css"
-	type="text/css" />
+<link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" />
+	
+	<style> 
+	label.error { color: #d9534f; }
+	input.error { border: 2px solid #d9534f; }
+	</style>
 
 </head>
 <body>
@@ -20,7 +24,7 @@
 			
 			<h5>${mensagem}</h5>
 
-			<form method="post" action="cadastro-mercadorias-post">
+			<form id="cadastroMercadoria" method="post" action="cadastro-mercadorias-post">
 
 				<div class="mb-2">
 					<label for="nomeMercadoria" class="form-label"> Mercadoria:</label>
@@ -68,9 +72,39 @@
 
 		</div>
 	</div>
+		
+			<script src="resources/js/bootstrap.bundle.min.js"></script>
+			<script src="resources/js/bootstrap.bundle.min.js"></script>
+			<script src="resources/js/jquery-3.7.0.min.js"></script>
+			<script src="resources/js/jquery.validate.min.js"></script>
+			<script src="resources/js/additional-methods.min.js"></script>
+			<script src="resources/js/messages_pt_BR.min.js"></script>
 
-
-	<script src="resources/js/bootstrap.bundle.min.js"></script>
+	<script>
+		$(document).ready(function() {		
+			$("#cadastroMercadoria").validate({
+				rules : {
+					"nomeMercadoria" : {
+						required : true,
+						minlength : 8,
+						maxlength : 100
+					},
+					"descricao" : {
+						required : true,
+					},
+					"quantidade" : {
+						required : true
+					},
+					"dataEntrada" : {
+						required : true,
+					},
+					"tipo" : {
+						required : true,
+					}
+				}
+			});
+		})
+	</script>
 
 </body>
 </html>
