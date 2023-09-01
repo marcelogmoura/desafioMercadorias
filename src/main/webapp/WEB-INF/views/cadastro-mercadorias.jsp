@@ -12,9 +12,7 @@
 </head>
 <body>
 
-
-	<div
-		class="container d-flex justify content-center align-items-center vh-20">
+		<div class="container d-flex justify-content-center align-items-center vh-100">
 		<div class="card p-4">
 
 			<h2 class="text-center">Cadastro de Mercadorias</h2>

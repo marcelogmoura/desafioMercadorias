@@ -7,7 +7,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CadastroMercadorias {
 	
-	@RequestMapping(value = "/cadastro-mercadorias")
+	//@RequestMapping(value = "/cadastro-mercadorias")
+	@RequestMapping(value="/")
 	public ModelAndView cadastroMercadorias() {
 		
 		ModelAndView modelAndView = new ModelAndView("cadastro-mercadorias");
