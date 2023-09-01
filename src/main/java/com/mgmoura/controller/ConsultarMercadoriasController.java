@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class ConsultarMercadorias {
+public class ConsultarMercadoriasController {
 	
 	@RequestMapping(value = "/consultar-mercadorias")
 	public ModelAndView consultarMercadorias() {
