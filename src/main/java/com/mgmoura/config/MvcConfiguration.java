@@ -44,7 +44,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	
 	@Bean
 	public MercadoriaRepository getMercadoriaRepository() {
-		return new MercadoriaRepository(getDataSource());				
+		return new MercadoriaRepository(getDataSource());
 	}
 
 }

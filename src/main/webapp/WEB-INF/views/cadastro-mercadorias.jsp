@@ -17,30 +17,32 @@
 
 			<h2 class="text-center">Cadastro de Mercadorias</h2>
 			<p class="text-center">Preencha os campos abaixo</p>
+			
+			<h5>${mensagem}</h5>
 
-			<form>
+			<form method="post" action="cadastro-mercadorias-post">
 
 				<div class="mb-2">
 					<label for="nomeMercadoria" class="form-label"> Mercadoria:</label>
-					<input type="text" class="form-control" id="nomeMercadoria"
+					<input type="text" class="form-control" id="nomeMercadoria" name="nomeMercadoria"
 						placeholder="Informe o nome">
 				</div>
 
 				<div class="mb-2">
 					<label for="descricao" class="form-label"> Descrição:</label> <input
-						type="text" class="form-control" id="descricao"
+						type="text" class="form-control" id="descricao" name="descricao"
 						placeholder="Informe a descrição">
 				</div>
 
 				<div class="mb-2">
 					<label for="quantidade" class="form-label"> Quantidade:</label> <input
-						type="text" class="form-control" id="quantidade"
+						type="text" class="form-control" id="quantidade" name="quantidade"
 						placeholder="Informe a quantidade">
 				</div>
 
 				<div class="mb-2">
 					<label for="dataEntrada" class="form-label"> Data Entrada:</label>
-					<input type="date" class="form-control" id="dataEntrada"
+					<input type="date" class="form-control" id="dataEntrada" name="dataEntrada"
 						placeholder="Informe a data">
 				</div>
 
