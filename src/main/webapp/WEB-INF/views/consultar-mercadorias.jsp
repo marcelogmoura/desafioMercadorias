@@ -44,10 +44,11 @@
 							class="form-control" value="${dt_fim}"/>
 					</div>
 					
-					<div class="col-md-4">
-						<input type="submit" value="Pesquisar"
-							class="btn btn-dark" />
-					</div><p>
+					<div class="col-md-4 d-flex">
+				    <input type="submit" value="Pesquisar" class="btn btn-dark me-2" />
+				    <input type="button" value="Limpar Pesquisa" id="limparPesquisa" class="btn btn-dark" />
+					</div>					
+					
 					
 					<div class="d-grid mt-2">
 					<a href="/desafioMercadorias" class="btn btn-light">
@@ -109,8 +110,9 @@
 			<script src="resources/js/messages_pt_BR.min.js"></script>
 			<script src="resources/js/jquery.dataTables.min.js"></script>
 			
-				<script>
+		<script>
 		$(document).ready(function() {		
+			
 			$("#consultarMercadoria").validate({
 				rules : {
 					"nomeMercadoria" : {
@@ -139,7 +141,20 @@
 			$("#tabela").DataTable({
 				language: {
 				url: 'resources/js/dataTables.pt-BR.json'
-				}			
+				}
+			});
+			
+			$("#limparPesquisa").click(function() {
+	            // Limpar campos do formulário
+	            $("#dataInicio").val('');
+	            $("#dataFim").val('');
+
+	            // Limpar tabela de resultados
+	            $("#tabela tbody").empty();
+	        });
+			
+			
+			
 		})
 	</script>
 			
