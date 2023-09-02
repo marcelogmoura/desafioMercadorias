@@ -45,7 +45,7 @@ public class ConsultarMercadoriasController {
 				modelAndView.addObject("lista_mercadorias" , mercadorias);
 				
 			}else {
-				modelAndView.addObject("mensagem_alerta" , "Nenhuma mercadoria encontrada nesse período");
+				modelAndView.addObject("mensagem_alerta" , "Nenhuma mercadoria encontrada no período");
 			}
 			
 			modelAndView.addObject("dt_inicio", dataInicio);

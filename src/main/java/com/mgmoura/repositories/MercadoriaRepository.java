@@ -38,7 +38,7 @@ public class MercadoriaRepository {
 	
 	public List<Mercadoria> findAll(Date dataMin, Date dataMax) throws Exception{
 		
-		String sql = "SELECT * FROM mercadoria WHERE dataentrada BETWEEN ? AND ? ORDER BY dataentrada";
+		String sql = "SELECT * FROM mercadoria WHERE dataEntrada BETWEEN ? AND ? ORDER BY dataEntrada";
 		
 		Object[] params = {
 				new java.sql.Date(dataMin.getTime()),
@@ -52,6 +52,7 @@ public class MercadoriaRepository {
 				
 				Mercadoria mercadoria = new Mercadoria();
 				
+				mercadoria.setId(rs.getInt("id"));
 				mercadoria.setNomeMercadoria(rs.getString("nomeMercadoria"));
 				mercadoria.setQuantidade(rs.getInt("quantidade"));
 				mercadoria.setDescricao(rs.getString("descricao"));
