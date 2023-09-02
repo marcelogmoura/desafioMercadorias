@@ -1,8 +1,14 @@
 package com.mgmoura.repositories;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Date;
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 import com.mgmoura.entities.Mercadoria;
 
@@ -29,5 +35,41 @@ public class MercadoriaRepository {
 		
 		jdbcTemplate.update(sql , params);
 	}
+	
+	public List<Mercadoria> findAll(Date dataMin, Date dataMax) throws Exception{
+		
+		String sql = "SELECT * FROM mercadoria WHERE dataentrada BETWEEN ? AND ? ORDER BY dataentrada";
+		
+		Object[] params = {
+				new java.sql.Date(dataMin.getTime()),
+				new java.sql.Date(dataMax.getTime()),				
+		};
+		
+		List<Mercadoria> mercadorias = jdbcTemplate.query(sql, params , new RowMapper<Mercadoria>() {
+
+			@Override
+			public Mercadoria mapRow(ResultSet rs, int rowNum) throws SQLException {
+				
+				Mercadoria mercadoria = new Mercadoria();
+				
+				mercadoria.setNomeMercadoria(rs.getString("nomeMercadoria"));
+				mercadoria.setQuantidade(rs.getInt("quantidade"));
+				mercadoria.setDescricao(rs.getString("descricao"));
+				mercadoria.setTipo(rs.getInt("tipo"));
+				
+				
+				return mercadoria;
+			}
+			
+		});
+		return mercadorias;
+		
+	}
 
 }
+
+
+
+
+
+

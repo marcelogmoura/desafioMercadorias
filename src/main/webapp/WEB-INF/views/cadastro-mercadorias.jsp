@@ -54,21 +54,23 @@
 				</div>
 
 				<div class="md-2">
-					<label>Tipo de Alimento:</label> <select id="tipo" name="tipo"
+					<label>Tipo de Mercadoria:</label> <select id="tipo" name="tipo"
 						class="form-select">
 						<option value="">Selecione uma opção</option>
 						<option value="1">Perecível</option>
 						<option value="2">Não Perecível</option>
 					</select>
 				</div>
+								
 				<hr>
 
 				<div class="d-grid">
 					<button type="submit" class="btn btn-dark">Cadastrar </button>
 				</div><p>
 
-				<div class="d-grid">
-					<button type="submit" class="btn btn-dark">Pesquisar</button>
+				<div class="d-grid mt-2">
+					<a href="consultar-mercadorias" class="btn btn-light">
+						Clique aqui para fazer uma consulta </a>
 				</div>
 
 			</form>
