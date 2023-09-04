@@ -153,8 +153,6 @@
 	            $("#tabela tbody").empty();
 	        });
 			
-			
-			
 		})
 	</script>
 			

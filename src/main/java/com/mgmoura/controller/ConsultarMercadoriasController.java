@@ -1,7 +1,6 @@
 package com.mgmoura.controller;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,8 +24,7 @@ public class ConsultarMercadoriasController {
 	public ModelAndView consultarMercadorias() {
 		ModelAndView modelAndView = new ModelAndView("consultar-mercadorias");
 		return modelAndView;
-	}
-	
+	}	
 	
 	@RequestMapping(value = "consultar-mercadorias-post" , method = RequestMethod.POST)
 	public ModelAndView consultarMercadoriasPost(HttpServletRequest request) {
@@ -57,9 +55,7 @@ public class ConsultarMercadoriasController {
 			
 		}
 		
-		return modelAndView;
-				
-		
+		return modelAndView;			
 	}
 
 

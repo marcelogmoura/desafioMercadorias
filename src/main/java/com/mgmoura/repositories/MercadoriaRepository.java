@@ -57,8 +57,8 @@ public class MercadoriaRepository {
 				mercadoria.setQuantidade(rs.getInt("quantidade"));
 				mercadoria.setDescricao(rs.getString("descricao"));
 				mercadoria.setTipo(rs.getInt("tipo"));
-				
-				
+				mercadoria.setDataEntrada(rs.getDate("dataEntrada"));
+								
 				return mercadoria;
 			}
 			
